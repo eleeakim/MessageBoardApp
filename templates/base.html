@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Notice Boards{% endblock %}</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" />
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{% static 'css/index.css' %}"> 
+  {% block stylesheet %}{% endblock %}
+</head>
+
+<body>
+  {% block body %}
+  <div>
+       
+      {% if user.is_authenticated %}
+      
+      <div>
+        <h2>Company Message Boards</h2>
+        <a href="{% url 'my_account' %}"><button>My account</button></a>
+        <a href="#"><button>Change password</button></a>
+        <a href="{% url 'logout' %}"><button>Log out</button></a>
+      
+      {% else %}
+      <a href="{% url 'login' %}"><button>Log in</button></a>
+      <a href="{% url 'signup' %}"><button>Sign Up</button></a>
+      {% endif %}
+    </div>
+
+
+    <article>
+      <div>
+        <ol>
+          {% block breadcrumb %}
+          {% endblock %}
+        </ol>
+        {% block content %}
+
+
+        {% endblock %}
+      </div>
+      {% endblock body %}
+    </article>
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>-->
+  {% block javascript %}{% endblock %}
+
+</body>
+
+</html>

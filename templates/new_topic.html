@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Start a New Topic{% endblock %}
+
+{% block breadcrumb %}
+  <li><a href="{% url 'home' %}">Notice Boards</a></li>
+  <li><a href="{% url 'board_topics' board.pk %}">{{ board.name }}</a></li>
+  <li>New topic</li>
+{% endblock %}
+
+{% block content %}
+<form method="post" novalidate>
+  {% csrf_token %}
+  <input type="hidden" name="next" value="{{ next }}">
+  {% include 'includes/form.html' %}
+    <button type="submit">Post</button>
+  </form>
+{% endblock %}
+
+
+
+
+  
+   

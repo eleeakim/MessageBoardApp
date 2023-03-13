@@ -1,0 +1,35 @@
+{% extends 'base_accounts.html' %}
+
+{% block title %}Sign up to Notice Boards{% endblock %}
+
+{% block content %}
+ 
+          <h3>Sign up</h3>
+          <form method="post" novalidate>
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ next }}">
+            {% include 'includes/form.html' %}
+            <br>
+            <button type="submit" >Create an account</button>
+            <br> <br>
+            Already have an account? <a href="{% url 'login' %}">Log in</a>
+          </form>
+     
+{% endblock %}
+
+
+
+  {% csrf_token %}
+  
+  {% include 'includes/form.html' %}
+  <br>
+
+  
+
+  <div>
+    New here? <a href="{% url 'signup' %}">Sign up</a> 
+  </div> <br>
+
+  <div><a href="#">Forgot your password?</a></div>
+
+</form>

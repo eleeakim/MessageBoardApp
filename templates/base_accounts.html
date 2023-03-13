@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block stylesheet %}
+  <link rel="stylesheet" href="{% static 'css/accounts.css' %}">
+{% endblock %}
+
+{% block body %}
+  <div>
+   
+      <a href="{% url 'home' %}">Return to Homepage</a>
+    
+    {% block content %}
+    {% endblock %}
+  </div>
+{% endblock %}

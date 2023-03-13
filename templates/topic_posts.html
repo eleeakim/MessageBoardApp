@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}{{ topic.subject }}{% endblock %}
+
+{% block breadcrumb %}
+<li><a href="{% url 'home' %}">Message Boards</a></li>
+  <li><a href="{% url 'board_topics' topic.board.pk %}">{{ topic.board.name }}</a></li>
+  <li>{{ topic.subject }}</li>
+{% endblock %}
+
+
+
+
+{% block content %}
+
+{% for post in posts %}
+<div>
+  <div>
+    <!-- <img src="{% static 'img/avatar.svg' %}" alt="{{ post.created_by.username }}"> -->
+    {{ post.created_by.first_name }} {{ post.created_by.last_name }} <br>
+    Number of Posts: {{ post.created_by.posts.count }}<br>
+    {{ post.created_at }}
+  </div>
+  
+  <div>
+  
+  </div>
+  {% if forloop.first %}
+  <div>
+    {{ topic.subject }}
+  </div>
+  {% endif %}
+  
+  <div>
+    {{ post.get_message_as_markdown }}
+    {% if post.created_by == user %}
+    <a href="{% url 'reply_topic' topic.board.pk topic.pk %}" role="button">Reply</a>
+    <a href="{% url 'edit_post' post.topic.board.pk post.topic.pk post.pk %}" role="button">Edit</a>
+    <br><br><br>
+  </div>
+</div>
+{% endif %}
+
+{% endfor %}
+
+{% include 'includes/pagination.html' %}
+
+{% endblock %}
+
+

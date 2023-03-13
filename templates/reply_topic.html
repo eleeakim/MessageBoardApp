@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Post a reply{% endblock %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'css/simplemde.min.css' %}">
+{% endblock %}
+
+{% block javascript %}
+<script src="{% static 'js/simplemde.min.js' %}"></script>
+<script>
+  var simplemde = new SimpleMDE();
+</script>
+{% endblock %}
+
+{% block breadcrumb %}
+<li><a href="{% url 'home' %}">Message Boards</a></li>
+<li><a href="{% url 'board_topics' topic.board.pk %}">{{ topic.board.name }}</a></li>
+<li><a href="{% url 'topic_posts' topic.board.pk topic.pk %}">{{ topic.subject }}</a></li>
+<li>Post a reply</li>
+{% endblock %}
+
+{% block content %}
+
+<form method="post" novalidate>
+  {% csrf_token %}
+  <input type="hidden" name="next" value="{{ next }}">
+  {% include 'includes/form.html' %}
+  <button type="submit" >Post a reply</button>
+</form>
+
+
+
+
+{% for post in topic.posts.all %}
+<div>
+  <div>
+
+    <div>
+      <strong>{{ post.created_by.username }} Replied on <small>{{ post.created_at }}</small> </strong>
+    </div>
+    <div>
+
+    </div>
+
+    {{ post.get_message_as_markdown }}
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}

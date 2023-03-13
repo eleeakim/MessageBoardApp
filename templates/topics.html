@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% load humanize %}
+
+{% block title %}
+  {{ board.name }} - {{ block.super }}
+{% endblock %}
+
+{% block breadcrumb %}
+ <li><a href="{% url 'home' %}">Notice Boards</a></li>
+  <li>{{ board.name }}</li>
+{% endblock %}
+
+{% block content %}
+  <div>
+    <a href="{% url 'new_topic' board.pk %}" class="auth2">Start a new topic</a>
+  </div>
+
+  <div>
+    <table >
+      <thead>
+        <tr>
+          <th>Topic</th>
+          <th>Starter</th>
+          <th>Replies</th>
+          <th>Views</th>
+          <th>Last Update</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for topic in topics %}
+          <tr>
+            <td><a href="{% url 'topic_posts' board.pk topic.pk %}">{{ topic.subject }}</a></td>
+            <td>{{ topic.starter.first_name }} {{ topic.starter.last_name }}</td>
+            <td>{{ topic.replies }}</td>
+            <td>{{ topic.views }}</td>
+            <td>{{ topic.last_updated|naturaltime }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  
+  </div>
+  {% include 'includes/pagination.html' %}
+
+
+{% endblock %}

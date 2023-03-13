@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block breadcrumb %}
+ 
+{% endblock %}
+
+{% block content %}
+
+  <table>
+    <h2>Welcome back, {{user.first_name}}</h2>
+    <thead>
+      <tr>
+        <th>Notice Board</th>
+        <th>Posts</th>
+        <th>Topics</th>
+        <th>Last Post</th>
+      </tr>
+    </thead>
+
+    
+    <tbody>
+      {% for board in boards %}
+        <tr>
+          <td>
+            <a href="{% url 'board_topics' board.pk %}">{{ board.name }}</a> <br>
+            <small>{{ board.description }}</small>
+          </td>
+          <td>
+            {{ board.get_posts_count }}
+          </td>
+          <td>
+            {{ board.topics.count }}
+          </td>
+          <td>
+            {% with post=board.get_last_post %}
+            {% if post %}
+              <small>
+                <a href="{% url 'topic_posts' board.pk post.topic.pk %}">
+                  Author: {{ post.created_by.first_name }} {{ post.created_by.last_name }} <br> {{ post.created_at }}
+                </a>
+              </small>
+              {% else %}
+              <small class="text-muted">
+                <em>No posts yet.</em>
+              </small>
+            {% endif %}
+            {% endwith %}
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
