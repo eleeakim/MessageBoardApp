@@ -50,3 +50,6 @@ zipp==3.15.0
 step 3: Create a superuser
 
 step 4: Run server
+
+# To do list
+- Add stlying
