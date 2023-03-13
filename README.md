@@ -16,7 +16,7 @@ set up and run the application on their local machine. Users can also deploy the
 Overall, this message board application is a user-friendly and scalable platform for online discussion and community building.
 
 
-#Screenshorts
+# Screenshorts
 ![Homepage](https://user-images.githubusercontent.com/103770049/224611666-03ae1578-3490-43ee-9def-49819a13ebea.png)
 
 ![Finance Message board](https://user-images.githubusercontent.com/103770049/224610942-68a37a70-5c09-47ac-a57e-6b9933218839.PNG)
@@ -28,7 +28,7 @@ Overall, this message board application is a user-friendly and scalable platform
 ![sign up page](https://user-images.githubusercontent.com/103770049/224611914-a871f31b-ace8-4f10-b81d-922459b37f89.PNG)
 
 
-#How to Install MessageBoardApp
+# How to Install MessageBoardApp
 
 step 1: Create a virtual environment and activate it.
 
