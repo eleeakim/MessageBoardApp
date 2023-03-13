@@ -1,4 +1,5 @@
 # MessageBoardApp
+
 This message board application is built using the Python Django web framework and uses a SQLite database to store message data. 
 The application allows users to create new threads, reply to existing threads, and view all threads in the system. Users can 
 also search for threads based on keywords or tags associated with the thread.
@@ -17,6 +18,7 @@ Overall, this message board application is a user-friendly and scalable platform
 
 
 # Screenshorts
+
 ![Homepage](https://user-images.githubusercontent.com/103770049/224611666-03ae1578-3490-43ee-9def-49819a13ebea.png)
 
 ![Finance Message board](https://user-images.githubusercontent.com/103770049/224610942-68a37a70-5c09-47ac-a57e-6b9933218839.PNG)
