@@ -30,9 +30,9 @@ Overall, this message board application is a user-friendly and scalable platform
 
 # How to Install MessageBoardApp
 
-step 1: Create a virtual environment and activate it.
+- step 1: Create a virtual environment and activate it.
 
-step2: Install the following python libraries.
+- step2: Install the following python libraries.
 
 asgiref==3.6.0
 Django==4.1.7
@@ -47,9 +47,9 @@ typing_extensions==4.5.0
 tzdata==2022.7
 zipp==3.15.0
 
-step 3: Create a superuser
+- step 3: Create a superuser
 
-step 4: Run server
+- step 4: Run server
 
 # To do list
 - Add stlying
