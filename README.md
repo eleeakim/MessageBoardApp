@@ -14,8 +14,6 @@ The application also includes forms to allow users to submit new messages or rep
 To use the message board application, users can clone the GitHub repository and follow the instructions below to 
 set up and run the application on their local machine. Users can also deploy the application to a web server to make it accessible to others.
 
-Overall, this message board application is a user-friendly and scalable platform for online discussion and community building.
-
 
 # Screenshorts
 
