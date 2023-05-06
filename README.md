@@ -16,16 +16,10 @@ set up and run the application on their local machine. Users can also deploy the
 
 
 # Screenshorts
+![Login](https://user-images.githubusercontent.com/103770049/236622119-63e16090-7bdd-4266-9471-9d9c4f15d557.PNG)
+![SignUp](https://user-images.githubusercontent.com/103770049/236622133-ce206c68-ac19-4285-8f08-a1ae21327dc4.PNG)
+![1](https://user-images.githubusercontent.com/103770049/236622149-35b7dcbc-03bc-4353-bf7f-d2f8f6be919e.PNG)
 
-![Homepage](https://user-images.githubusercontent.com/103770049/224611666-03ae1578-3490-43ee-9def-49819a13ebea.png)
-
-![Finance Message board](https://user-images.githubusercontent.com/103770049/224610942-68a37a70-5c09-47ac-a57e-6b9933218839.PNG)
-
-![login](https://user-images.githubusercontent.com/103770049/224611721-40561549-29f6-4fe7-a472-9100b898ecb7.PNG)
-
-![my account](https://user-images.githubusercontent.com/103770049/224611881-0077bd6e-4af0-4ea6-87f4-348f77ef79a6.PNG)
-
-![sign up page](https://user-images.githubusercontent.com/103770049/224611914-a871f31b-ace8-4f10-b81d-922459b37f89.PNG)
 
 
 # How to Install MessageBoardApp
