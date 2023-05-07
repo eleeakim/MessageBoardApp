@@ -11,9 +11,6 @@ The message board data is stored in a SQLite database, which is a lightweight an
 includes models to represent the message board data, views to display the data, and templates to render the data to the user. 
 The application also includes forms to allow users to submit new messages or replies.
 
-To use the message board application, users can clone the GitHub repository and follow the instructions below to 
-set up and run the application on their local machine. Users can also deploy the application to a web server to make it accessible to others.
-
 # Screenshorts
 ![Login](https://user-images.githubusercontent.com/103770049/236622119-63e16090-7bdd-4266-9471-9d9c4f15d557.PNG)
 ![SignUp](https://user-images.githubusercontent.com/103770049/236622133-ce206c68-ac19-4285-8f08-a1ae21327dc4.PNG)
